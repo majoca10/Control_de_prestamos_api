@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "clients",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombres": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "default": "notiene@notiene.com"
+    },
+    "cel": {
+      "type": "biginteger",
+      "default": "3001234567"
+    },
+    "direccion": {
+      "type": "string",
+      "default": "no tiene"
+    },
+    "documento": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "prestamos": {
+      "via": "client",
+      "collection": "prestamos"
+    },
+    "pagos": {
+      "via": "client",
+      "collection": "pagos"
+    }
+  }
+}

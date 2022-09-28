@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/prestamos",
+      "handler": "prestamos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prestamos/count",
+      "handler": "prestamos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prestamos/:id",
+      "handler": "prestamos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prestamos/cliente/:id",
+      "handler": "prestamos.findbyCliente",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/prestamos",
+      "handler": "prestamos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prestamos/:id",
+      "handler": "prestamos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prestamos/datefile/:id",
+      "handler": "prestamos.updatedatefile",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/prestamos/:id",
+      "handler": "prestamos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prestamos",
+  "info": {
+    "name": "Prestamos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fechaipago": {
+      "type": "date",
+      "required": true
+    },
+    "monto": {
+      "type": "string",
+      "required": true
+    },
+    "intereses": {
+      "type": "string",
+      "required": true
+    },
+    "totalpagar": {
+      "type": "string",
+      "required": true
+    },
+    "ncuotas": {
+      "type": "string",
+      "required": true
+    },
+    "vcuotas": {
+      "type": "string"
+    },
+    "fechaspagos": {
+      "type": "json"
+    },
+    "client": {
+      "model": "clients",
+      "via": "prestamos"
+    },
+    "eliminado": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "ppagos": {
+      "type": "string",
+      "required": true,
+      "default": "0"
+    },
+    "finalizado": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "pago": {
+      "via": "prestamo",
+      "model": "pagos"
+    }
+  }
+}

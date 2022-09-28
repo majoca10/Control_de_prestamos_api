@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pagos",
+  "info": {
+    "name": "Pagos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client": {
+      "model": "clients",
+      "via": "pagos"
+    },
+    "fechaspagos": {
+      "type": "json",
+      "required": true
+    },
+    "prestamo": {
+      "model": "prestamos",
+      "via": "pago"
+    }
+  }
+}
